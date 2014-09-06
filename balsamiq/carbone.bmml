@@ -546,12 +546,12 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="31" controlTypeID="__group__" x="1629" y="258" w="103" h="25" measuredW="103" measuredH="25" zOrder="29" locked="false" isInGroup="-1">
+    <control controlID="31" controlTypeID="__group__" x="1637" y="258" w="95" h="22" measuredW="95" measuredH="22" zOrder="29" locked="false" isInGroup="-1">
       <controlProperties>
         <controlName>ga-switch-on</controlName>
       </controlProperties>
       <groupChildrenDescriptors>
-        <control controlID="5" controlTypeID="com.balsamiq.mockups::RoundButton" x="15" y="0" w="88" h="25" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="31">
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::RoundButton" x="14" y="0" w="81" h="22" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="31">
           <controlProperties>
             <align>left</align>
             <color>3355443</color>
@@ -560,7 +560,7 @@
             <text/>
           </controlProperties>
         </control>
-        <control controlID="6" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="70" h="25" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="31">
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="65" h="22" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="31">
           <controlProperties>
             <align>center</align>
             <borderColor>0</borderColor>
@@ -890,7 +890,7 @@
     <control controlID="51" controlTypeID="com.balsamiq.mockups::Paragraph" x="1629" y="203" w="320" h="50" measuredW="200" measuredH="80" zOrder="27" locked="false" isInGroup="-1">
       <controlProperties>
         <markup>true</markup>
-        <text>*How%20many%20passengers*%0A%20%0AMaximum%202%20passengers</text>
+        <text>*How%20many%20passengers*%0A%20%0AMaximum%202</text>
       </controlProperties>
     </control>
     <control controlID="52" controlTypeID="__group__" x="1588" y="203" w="22" h="20" measuredW="22" measuredH="20" zOrder="28" locked="false" isInGroup="-1">
@@ -991,6 +991,32 @@
             <markup>true</markup>
             <size>10</size>
             <text>6</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="57" controlTypeID="__group__" x="1741" y="257" w="89" h="23" measuredW="89" measuredH="23" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <controlName>ga-switch-on</controlName>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="88" h="23" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="57">
+          <controlProperties>
+            <align>left</align>
+            <color>3355443</color>
+            <shape>roundRect</shape>
+            <size>14</size>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::RoundButton" x="34" y="0" w="55" h="23" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="57">
+          <controlProperties>
+            <align>center</align>
+            <borderColor>0</borderColor>
+            <color>7317724</color>
+            <shape>roundRect</shape>
+            <size>13</size>
+            <text>%7Bcolor%3A%23ffffff%7DMe%20+%201%7Bcolor%7D</text>
           </controlProperties>
         </control>
       </groupChildrenDescriptors>
