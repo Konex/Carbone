@@ -1,4 +1,4 @@
 Carbone
 =======
 
-Just another social app that to reduce CO2
+Just a little social app that helps to reduce CO2
