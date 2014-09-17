@@ -3577,7 +3577,6 @@
                 <override controlID="0" x="0" y="0" w="248" h="33"/>
                 <override controlID="1" x="1" y="1" w="246" h="31"/>
                 <override controlID="2" x="10" y="8" w="61" h="22"/>
-                <override controlID="-1"/>
                 <src>./assets/symbols.bmml#List Item - Notifications</src>
               </controlProperties>
             </control>
@@ -5762,6 +5761,7 @@
             <override controlID="0" x="0" y="0" w="248" h="33"/>
             <override controlID="1" x="1" y="1" w="246" h="31"/>
             <override controlID="2" x="10" y="8" w="61" h="22"/>
+            <override controlID="-1"/>
             <src>./assets/symbols.bmml#List Item - Notifications</src>
           </controlProperties>
         </control>
@@ -7431,7 +7431,7 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="397" controlTypeID="__group__" x="2149" y="984" w="82" h="32" measuredW="82" measuredH="32" zOrder="153" locked="false" isInGroup="-1">
+    <control controlID="397" controlTypeID="__group__" x="2149" y="984" w="97" h="32" measuredW="97" measuredH="32" zOrder="153" locked="false" isInGroup="-1">
       <controlProperties>
         <controlName>ga-gesture-swipe-right</controlName>
       </controlProperties>
@@ -7443,7 +7443,7 @@
             <color>2848996</color>
           </controlProperties>
         </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="38" y="11" w="44" h="10" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="397">
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Arrow" x="38" y="11" w="59" h="10" measuredW="150" measuredH="100" zOrder="1" locked="false" isInGroup="397">
           <controlProperties>
             <color>7317724</color>
             <curvature>0</curvature>
