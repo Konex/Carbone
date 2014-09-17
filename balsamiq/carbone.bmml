@@ -274,7 +274,7 @@
         <shape>rectangle</shape>
       </controlProperties>
     </control>
-    <control controlID="142" controlTypeID="com.balsamiq.mockups::Paragraph" x="2064" y="1713" w="172" h="34" measuredW="200" measuredH="80" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="142" controlTypeID="com.balsamiq.mockups::Paragraph" x="2064" y="1713" w="172" h="34" measuredW="275" measuredH="80" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <markup>true</markup>
         <text>*Swipe%20to%20delete%20carbone*%0A%20</text>
@@ -925,7 +925,7 @@
     </control>
     <control controlID="210" controlTypeID="__group__" x="369" y="3425" w="350" h="207" measuredW="350" measuredH="207" zOrder="30" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="207" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="210">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="207" measuredW="275" measuredH="80" zOrder="0" locked="false" isInGroup="210">
           <controlProperties>
             <markup>true</markup>
             <size>14</size>
@@ -1026,7 +1026,7 @@
     </control>
     <control controlID="213" controlTypeID="__group__" x="369" y="3638" w="350" h="245" measuredW="350" measuredH="245" zOrder="33" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="245" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="213">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="245" measuredW="275" measuredH="80" zOrder="0" locked="false" isInGroup="213">
           <controlProperties>
             <markup>true</markup>
             <size>14</size>
@@ -1441,7 +1441,7 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="228" controlTypeID="com.balsamiq.mockups::Paragraph" x="1230" y="3425" w="161" h="72" measuredW="200" measuredH="80" zOrder="41" locked="false" isInGroup="-1">
+    <control controlID="228" controlTypeID="com.balsamiq.mockups::Paragraph" x="1230" y="3425" w="161" h="72" measuredW="275" measuredH="80" zOrder="41" locked="false" isInGroup="-1">
       <controlProperties>
         <markup>true</markup>
         <size>14</size>
@@ -1890,7 +1890,7 @@
         <text>Home%20view%20-%20inox%20available</text>
       </controlProperties>
     </control>
-    <control controlID="243" controlTypeID="com.balsamiq.mockups::Paragraph" x="1826" y="3425" w="229" h="155" measuredW="200" measuredH="80" zOrder="52" locked="false" isInGroup="-1">
+    <control controlID="243" controlTypeID="com.balsamiq.mockups::Paragraph" x="1826" y="3425" w="229" h="155" measuredW="275" measuredH="80" zOrder="52" locked="false" isInGroup="-1">
       <controlProperties>
         <markup>true</markup>
         <size>14</size>
@@ -2303,7 +2303,7 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="254" controlTypeID="com.balsamiq.mockups::Paragraph" x="2514" y="3425" w="207" h="72" measuredW="200" measuredH="80" zOrder="61" locked="false" isInGroup="-1">
+    <control controlID="254" controlTypeID="com.balsamiq.mockups::Paragraph" x="2514" y="3425" w="207" h="72" measuredW="275" measuredH="80" zOrder="61" locked="false" isInGroup="-1">
       <controlProperties>
         <markup>true</markup>
         <size>14</size>
@@ -2432,7 +2432,7 @@
     </control>
     <control controlID="258" controlTypeID="__group__" x="369" y="3892" w="350" h="163" measuredW="350" measuredH="163" zOrder="68" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="163" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="258">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="163" measuredW="275" measuredH="80" zOrder="0" locked="false" isInGroup="258">
           <controlProperties>
             <markup>true</markup>
             <size>14</size>
@@ -2753,7 +2753,7 @@
             </control>
           </groupChildrenDescriptors>
         </control>
-        <control controlID="12" controlTypeID="com.balsamiq.mockups::Paragraph" x="338" y="126" w="201" h="50" measuredW="200" measuredH="80" zOrder="12" locked="false" isInGroup="273">
+        <control controlID="12" controlTypeID="com.balsamiq.mockups::Paragraph" x="338" y="126" w="201" h="50" measuredW="275" measuredH="80" zOrder="12" locked="false" isInGroup="273">
           <controlProperties>
             <markup>true</markup>
             <text>*How%20many%20passengers*%0A%20%0AMaximum%202</text>
@@ -2887,7 +2887,7 @@
             </control>
           </groupChildrenDescriptors>
         </control>
-        <control controlID="19" controlTypeID="com.balsamiq.mockups::Paragraph" x="338" y="226" w="201" h="52" measuredW="200" measuredH="80" zOrder="19" locked="false" isInGroup="273">
+        <control controlID="19" controlTypeID="com.balsamiq.mockups::Paragraph" x="338" y="226" w="201" h="52" measuredW="275" measuredH="80" zOrder="19" locked="false" isInGroup="273">
           <controlProperties>
             <markup>true</markup>
             <text>*Pickup%20time%20picker*%0A%20%0ACan%20only%20choose%20today%27s%20time</text>
@@ -2976,7 +2976,7 @@
             </control>
           </groupChildrenDescriptors>
         </control>
-        <control controlID="25" controlTypeID="com.balsamiq.mockups::Paragraph" x="338" y="421" w="277" h="50" measuredW="200" measuredH="80" zOrder="25" locked="false" isInGroup="273">
+        <control controlID="25" controlTypeID="com.balsamiq.mockups::Paragraph" x="338" y="421" w="277" h="50" measuredW="275" measuredH="80" zOrder="25" locked="false" isInGroup="273">
           <controlProperties>
             <markup>true</markup>
             <text>*Expire%20time%20picker*%0A%20%0AA%20time%20between%20current%20time%20and%20pick%20up%20time</text>
@@ -3072,7 +3072,7 @@
             </control>
           </groupChildrenDescriptors>
         </control>
-        <control controlID="30" controlTypeID="com.balsamiq.mockups::Paragraph" x="338" y="61" w="201" h="57" measuredW="200" measuredH="80" zOrder="30" locked="false" isInGroup="273">
+        <control controlID="30" controlTypeID="com.balsamiq.mockups::Paragraph" x="338" y="61" w="201" h="57" measuredW="275" measuredH="80" zOrder="30" locked="false" isInGroup="273">
           <controlProperties>
             <markup>true</markup>
             <text>*How%20many%20baggages%20you%20have*%0A%20%0AMaximum%202</text>
@@ -3577,6 +3577,7 @@
                 <override controlID="0" x="0" y="0" w="248" h="33"/>
                 <override controlID="1" x="1" y="1" w="246" h="31"/>
                 <override controlID="2" x="10" y="8" w="61" h="22"/>
+                <override controlID="-1"/>
                 <src>./assets/symbols.bmml#List Item - Notifications</src>
               </controlProperties>
             </control>
@@ -3788,7 +3789,7 @@
             </control>
           </groupChildrenDescriptors>
         </control>
-        <control controlID="14" controlTypeID="com.balsamiq.mockups::Paragraph" x="364" y="46" w="201" h="105" measuredW="200" measuredH="80" zOrder="14" locked="false" isInGroup="274">
+        <control controlID="14" controlTypeID="com.balsamiq.mockups::Paragraph" x="364" y="46" w="201" h="105" measuredW="275" measuredH="80" zOrder="14" locked="false" isInGroup="274">
           <controlProperties>
             <markup>true</markup>
             <text>*Incoming%20lift%20offer%28inox%29*%0A%20%0ALift%20offer%20indicator.%20It%20shows%20how%20many%20friends%20have%20responded%20to%20your%20carbone.%20Clicking%20on%20it%20will%20direct%20you%20to%20incoming%20inox%20view.</text>
@@ -5158,7 +5159,7 @@
     </control>
     <control controlID="335" controlTypeID="__group__" x="397" y="858" w="232" h="92" measuredW="232" measuredH="92" zOrder="95" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="191" h="92" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="335">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="191" h="92" measuredW="275" measuredH="80" zOrder="0" locked="false" isInGroup="335">
           <controlProperties>
             <markup>true</markup>
             <text>*Today%27s%20innox*%0A%20%0AOnly%20shows%20today%27s%20inoxes.%20Inoxes%20older%20than%20one%20day%20are%20forced%20to%20be%20expired%20by%20the%20app.</text>
@@ -5761,7 +5762,6 @@
             <override controlID="0" x="0" y="0" w="248" h="33"/>
             <override controlID="1" x="1" y="1" w="246" h="31"/>
             <override controlID="2" x="10" y="8" w="61" h="22"/>
-            <override controlID="-1"/>
             <src>./assets/symbols.bmml#List Item - Notifications</src>
           </controlProperties>
         </control>
@@ -5886,7 +5886,7 @@
     </control>
     <control controlID="363" controlTypeID="__group__" x="970" y="849" w="232" h="92" measuredW="232" measuredH="92" zOrder="122" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="191" h="92" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="363">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="191" h="92" measuredW="275" measuredH="80" zOrder="0" locked="false" isInGroup="363">
           <controlProperties>
             <markup>true</markup>
             <text>*Note*%0A%20%0AAn%20inox%20issuer%20can%20leave%20a%20note.%20Clicking%20on%20it%20will%20display%20its%20entirety.</text>
@@ -7797,7 +7797,7 @@
     </control>
     <control controlID="433" controlTypeID="__group__" x="390" y="126" w="350" h="207" measuredW="350" measuredH="207" zOrder="160" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="207" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="433">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="207" measuredW="275" measuredH="80" zOrder="0" locked="false" isInGroup="433">
           <controlProperties>
             <markup>true</markup>
             <size>14</size>
@@ -7898,7 +7898,7 @@
     </control>
     <control controlID="436" controlTypeID="__group__" x="390" y="339" w="350" h="245" measuredW="350" measuredH="245" zOrder="163" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="245" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="436">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="245" measuredW="275" measuredH="80" zOrder="0" locked="false" isInGroup="436">
           <controlProperties>
             <markup>true</markup>
             <size>14</size>
@@ -7939,7 +7939,7 @@
     </control>
     <control controlID="438" controlTypeID="__group__" x="390" y="593" w="350" h="163" measuredW="350" measuredH="163" zOrder="164" locked="false" isInGroup="-1">
       <groupChildrenDescriptors>
-        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="163" measuredW="200" measuredH="80" zOrder="0" locked="false" isInGroup="438">
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Paragraph" x="41" y="0" w="309" h="163" measuredW="275" measuredH="80" zOrder="0" locked="false" isInGroup="438">
           <controlProperties>
             <markup>true</markup>
             <size>14</size>
