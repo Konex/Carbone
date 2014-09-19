@@ -169,11 +169,11 @@
             <text/>
           </controlProperties>
         </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="70" y="8" w="89" h="-1" measuredW="74" measuredH="22" zOrder="1" locked="false" isInGroup="1">
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="70" y="8" w="77" h="-1" measuredW="76" measuredH="22" zOrder="1" locked="false" isInGroup="1">
           <controlProperties>
             <color>3355443</color>
             <size>14</size>
-            <text>I%20need%20a%20lift</text>
+            <text>Create%20a%20lift</text>
           </controlProperties>
         </control>
       </groupChildrenDescriptors>
@@ -190,7 +190,7 @@
             <color>11982760</color>
             <shape>roundRect</shape>
             <size>14</size>
-            <text>I%20want%20to%20offer%20a%20lift</text>
+            <text>Create%20an%20offer</text>
           </controlProperties>
         </control>
       </groupChildrenDescriptors>
@@ -3754,7 +3754,7 @@
             <color>11982760</color>
             <shape>roundRect</shape>
             <size>14</size>
-            <text>I%20want%20to%20offer%20a%20lift</text>
+            <text>Create%20an%20offer</text>
           </controlProperties>
         </control>
       </groupChildrenDescriptors>
@@ -3774,11 +3774,11 @@
             <text/>
           </controlProperties>
         </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="70" y="8" w="89" h="-1" measuredW="74" measuredH="22" zOrder="1" locked="false" isInGroup="264">
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="70" y="8" w="81" h="-1" measuredW="76" measuredH="22" zOrder="1" locked="false" isInGroup="264">
           <controlProperties>
             <color>3355443</color>
             <size>14</size>
-            <text>I%20need%20a%20lift</text>
+            <text>Create%20a%20lift</text>
           </controlProperties>
         </control>
       </groupChildrenDescriptors>
@@ -8554,7 +8554,7 @@
             <color>11982760</color>
             <shape>roundRect</shape>
             <size>14</size>
-            <text>I%20want%20to%20offer%20a%20lift</text>
+            <text>Create%20an%20offer</text>
           </controlProperties>
         </control>
       </groupChildrenDescriptors>
@@ -8574,11 +8574,11 @@
             <text/>
           </controlProperties>
         </control>
-        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="70" y="8" w="89" h="-1" measuredW="74" measuredH="22" zOrder="1" locked="false" isInGroup="459">
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="70" y="8" w="77" h="-1" measuredW="73" measuredH="22" zOrder="1" locked="false" isInGroup="459">
           <controlProperties>
             <color>3355443</color>
             <size>14</size>
-            <text>I%20need%20a%20lift</text>
+            <text>Create%20a%20ift</text>
           </controlProperties>
         </control>
       </groupChildrenDescriptors>
