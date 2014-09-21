@@ -5756,7 +5756,7 @@
         <color>2848996</color>
       </controlProperties>
     </control>
-    <control controlID="461" controlTypeID="com.balsamiq.mockups::Label" x="116" y="3167" w="428" h="-1" measuredW="428" measuredH="26" zOrder="193" locked="false" isInGroup="-1">
+    <control controlID="461" controlTypeID="com.balsamiq.mockups::Label" x="85" y="3141" w="428" h="-1" measuredW="428" measuredH="26" zOrder="193" locked="false" isInGroup="-1">
       <controlProperties>
         <size>18</size>
         <text>Yini%20responds%20to%20John%20Smith%20%26%20Emily%20Blunt%27s%20requests</text>
