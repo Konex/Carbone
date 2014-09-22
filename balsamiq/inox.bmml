@@ -15310,31 +15310,14 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="670" controlTypeID="com.balsamiq.mockups::RoundButton" x="1893" y="248" w="32" h="32" measuredW="32" measuredH="32" zOrder="354" locked="false" isInGroup="-1">
+    <control controlID="672" controlTypeID="com.balsamiq.mockups::RoundButton" x="700" y="1287" w="32" h="32" measuredW="32" measuredH="32" zOrder="354" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <borderColor>10470904</borderColor>
         <color>2848996</color>
       </controlProperties>
     </control>
-    <control controlID="671" controlTypeID="com.balsamiq.mockups::Arrow" x="1931" y="259" w="317" h="10" measuredW="150" measuredH="100" zOrder="355" locked="false" isInGroup="-1">
-      <controlProperties>
-        <color>7317724</color>
-        <curvature>0</curvature>
-        <direction>top</direction>
-        <leftArrow>false</leftArrow>
-        <rightArrow>true</rightArrow>
-        <text/>
-      </controlProperties>
-    </control>
-    <control controlID="672" controlTypeID="com.balsamiq.mockups::RoundButton" x="700" y="1287" w="32" h="32" measuredW="32" measuredH="32" zOrder="356" locked="false" isInGroup="-1">
-      <controlProperties>
-        <backgroundAlpha>0.5</backgroundAlpha>
-        <borderColor>10470904</borderColor>
-        <color>2848996</color>
-      </controlProperties>
-    </control>
-    <control controlID="673" controlTypeID="com.balsamiq.mockups::Arrow" x="738" y="1298" w="941" h="10" measuredW="150" measuredH="100" zOrder="357" locked="false" isInGroup="-1">
+    <control controlID="673" controlTypeID="com.balsamiq.mockups::Arrow" x="738" y="1298" w="941" h="10" measuredW="150" measuredH="100" zOrder="355" locked="false" isInGroup="-1">
       <controlProperties>
         <color>7317724</color>
         <curvature>0</curvature>
