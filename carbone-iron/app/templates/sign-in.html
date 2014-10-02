@@ -1,0 +1,40 @@
+<ion-view title="sign-in">
+    <ion-content>
+
+        <div class="logo-text">
+            <div class="logo-text-body">
+                <p>
+                    <h1 class="title text-center balanced">Carbone</h1>
+                </p>
+            </div>
+        </div>
+        <div class="list">
+
+            <label class="item item-input">
+                <i class="icon ion-person placeholder-icon"></i>
+                <input type="text" placeholder="Username" ng-model="user.username">
+            </label>
+            <label class="item item-input">
+                <i class="icon ion-key placeholder-icon"></i>
+                <input type="password" placeholder="Password" ng-model="user.password">
+            </label>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="signIn(user)">
+                Sign in
+            </button>
+            <p class="text-center">
+                <a href="#/forgot-password">Forgot password</a>
+            </p>
+
+            <p class="text-center">
+                <a href="#/create_account">Create an account</a>
+            </p>
+        </div>
+
+        <div class="bar bar-footer bar-balanced">
+            <button class="button button-clear">Konex</button>
+            <button class="button button-clear">Terms & conditions</button>
+        </div>
+    </ion-content>
+</ion-view>
