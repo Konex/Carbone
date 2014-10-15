@@ -25,3 +25,8 @@ angular.module('CarboneIron.services', [])
     }
   };
 });
+
+
+/**
+ * Sign in service.
+ */
