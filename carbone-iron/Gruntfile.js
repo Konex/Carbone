@@ -361,7 +361,7 @@ module.exports = function (grunt) {
     karma: {
       options: {
         basePath: '',
-        frameworks: ['mocha', 'chai'],
+        frameworks: ['jasmine'],
         files: [
           '<%= yeoman.app %>/bower_components/angular/angular.js',
           '<%= yeoman.app %>/bower_components/angular-animate/angular-animate.js',
@@ -392,11 +392,12 @@ module.exports = function (grunt) {
       unit: {
         // Change this to 'Chrome', 'Firefox', etc. Note that you will need
         // to install a karma launcher plugin for browsers other than Chrome.
-        browsers: ['PhantomJS'],
+        //browsers: ['PhantomJS'],
+        browsers: ['Chrome'],
         background: true
       },
       continuous: {
-        browsers: ['PhantomJS'],
+        browsers: ['Chrome'],
         singleRun: true,
       }
     },
