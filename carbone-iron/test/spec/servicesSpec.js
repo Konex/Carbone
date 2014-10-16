@@ -6,7 +6,7 @@ describe('SignInService', function() {
 
   beforeEach(module('CarboneIron'));
 
-  beforeEach(inject(function(_signInService_ _$httpBackend_){
+  beforeEach(inject(function(_signInService_, _$httpBackend_) {
     signInService = _signInService_;
     $httpBackend = _$httpBackend_;
 
