@@ -1,6 +1,6 @@
 'use strict';
 
-/* jasmine specs for controllers go here */
+/* chai and mocha specs for controllers go here */
 describe('CarboneIron controllers', function() {
 
   beforeEach(module('CarboneIron'));

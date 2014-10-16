@@ -361,7 +361,7 @@ module.exports = function (grunt) {
     karma: {
       options: {
         basePath: '',
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', 'mocha', 'chai'],
         files: [
           '<%= yeoman.app %>/bower_components/angular/angular.js',
           '<%= yeoman.app %>/bower_components/angular-animate/angular-animate.js',
