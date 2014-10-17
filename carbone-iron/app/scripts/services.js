@@ -24,9 +24,24 @@ angular.module('CarboneIron.services', [])
       return pets[petId];
     }
   };
-});
+})
 
 
 /**
  * Sign in service.
  */
+.factory('SignInService', function($http) {
+  return {
+    signIn: function(userName, password) {
+      return $http.get('https://api.Carbone.com/signin')
+      .then(function(response) {
+        var successful, userId, authToken;
+
+        successful = response.data.successful;
+        userId = response.data.userId;
+        authToken = response.data.authToken;
+
+      });
+    }
+  };
+});
