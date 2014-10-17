@@ -12,7 +12,7 @@ describe('SignInService', function() {
 
     // define a general http mock here.
     $httpBackend.when('GET', '/api/auth')
-      .respond([{userId: 'userX'}, {'token': 'xyz'}, {'message': ''}]);
+      .respond([{userId: 'userX'}, {'authToken': 'xyz'}, {'message': ''}]);
   }));
 
   afterEach(function() {
@@ -22,11 +22,11 @@ describe('SignInService', function() {
 
   it('should get sign in successful', function() {
     $httpBackend.expect('GET', 'https://api.carboneiron.com/signin')
-       .respond(200, "[{ success : 'true', id : 123 }]");
+    .respond(200, "[{successful: 'true', userId: 123, authToken: 'xyz'}]");
 
     signInService.signin('test@test.com', 'password')
        .then(function(data) {
-         expect(data.success).toBeTruthy();
+         expect(data.successful).toBeTruthy();
       });
 
     $httpBackend.flush();
