@@ -63,5 +63,4 @@ describe('SignInService', function() {
        }
      }])
   );
-
 });
