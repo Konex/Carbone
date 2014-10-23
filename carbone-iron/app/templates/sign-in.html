@@ -1,28 +1,22 @@
 <ion-view title="sign-in">
     <ion-content>
-
-        <div class="logo-text">
-            <div class="logo-text-body">
-                <p>
-                    <h1 class="title text-center balanced">Carbone</h1>
-                </p>
-            </div>
-        </div>
-
+        <p>
+            <h1 class="title text-center balanced">Carbone</h1>
+        </p>
         <form name="signInForm" ng-controller="SignInController"
               ng-submit="signin(credentials)" novalidate>
-            <div class="list">
-                <label class="item item-input">
-                    <i class="icon ion-person placeholder-icon"></i>
-                    <input type="text" id="username" placeholder="Username"
-                           ng-model="credentials.username">
-                </label>
-                <label class="item item-input">
-                    <i class="icon ion-key placeholder-icon"></i>
-                    <input type="password" id="password" placeholder="Password"
-                           ng-model="credentials.password">
-                </label>
-            </div>
+
+            <label class="item item-input">
+                <i class="icon ion-person placeholder-icon"></i>
+                <input type="text" id="username" placeholder="Username"
+                       ng-model="credentials.username">
+            </label>
+            <label class="item item-input">
+                <i class="icon ion-key placeholder-icon"></i>
+                <input type="password" id="password" placeholder="Password"
+                       ng-model="credentials.password">
+            </label>
+
             <div class="padding">
                 <button type="submit" class="button button-block button-positive" ng-click="signIn(user)">
                     Sign in
@@ -30,15 +24,13 @@
             </div>
         </form>
 
-        <div class="padding">
-            <p class="text-center">
-                <a href="#/forgot-password">Forgot password</a>
-            </p>
+        <p class="text-center">
+            <a href="#/forgot-password">Forgot password</a>
+        </p>
 
-            <p class="text-center">
-                <a href="#/create_account">Create an account</a>
-            </p>
-        </div>
+        <p class="text-center">
+            <a href="#/create_account">Create an account</a>
+        </p>
 
         <div class="bar bar-footer bar-balanced">
             <button class="button button-clear">Konex</button>
