@@ -13,4 +13,8 @@ angular.module('CarboneIron.controllers', [])
 .controller('PetDetailCtrl', function($scope, $stateParams, PetService) {
   // "Pets" is a service returning mock data (services.js)
   $scope.pet = PetService.get($stateParams.petId);
+})
+
+.controller('SignInCtrl', function($scope, $stateParams, SignInService) {
+  //$scope.pet = SignInService.get($stateParams.petId);
 });
