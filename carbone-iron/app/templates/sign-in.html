@@ -1,41 +1,41 @@
 <ion-view title="sign-in">
-    <ion-content>
-        <p>
-            <h1 class="title text-center balanced">Carbone</h1>
-        </p>
-        <form name="signInForm" ng-controller="SignInCtrl"
-              ng-submit="signin(credentials)" novalidate>
+  <ion-content>
 
-            <label class="item item-input">
-                <i class="icon ion-person placeholder-icon"></i>
-                <input type="text" id="username" placeholder="Username"
-                       ng-model="credentials.username">
-            </label>
-            <label class="item item-input">
-                <i class="icon ion-key placeholder-icon"></i>
-                <input type="password" id="password" placeholder="Password"
-                  ng-model="credentials.password">
-            </label>
+    <p>
+      <h1 class="title text-center balanced">Carbone</h1>
+    </p>
 
-            <div class="padding">
-                <button type="submit" class="button button-block button-positive"
-                  ng-click="signIn(user)">
-                    Sign in
-                </button>
-            </div>
-        </form>
+    <form name="signInForm" ng-controller="SignInCtrl"
+          ng-submit="signin(credentials)" novalidate>
+      <label class="item item-input">
+          <i class="icon ion-person placeholder-icon"></i>
+          <input type="text" id="username" placeholder="Username"
+                 ng-model="credentials.username">
+      </label>
+      <label class="item item-input">
+          <i class="icon ion-key placeholder-icon"></i>
+          <input type="password" id="password" placeholder="Password"
+                 ng-model="credentials.password">
+      </label>
+      <button type="submit" class="button button-block button-positive"
+        ng-click="signIn(user)">
+          Sign in
+      </button>
+    </form>
 
-        <p class="text-center">
-            <a href="#/forgot-password">Forgot password</a>
-        </p>
+    <p class="text-center">
+      <a href="#/forgot-password">Forgot password</a>
+    </p>
 
-        <p class="text-center">
-            <a href="#/create_account">Create an account</a>
-        </p>
+    <p class="text-center">
+      <a href="#/create_account">Create an account</a>
+    </p>
 
-        <div class="bar bar-footer bar-balanced">
-            <button class="button button-clear">Konex</button>
-            <button class="button button-clear">Terms & conditions</button>
-        </div>
-    </ion-content>
+  </ion-content>
+
+  <div class="bar bar-footer bar-balanced">
+    <button class="button button-clear">Konex</button>
+    <button class="button button-clear">Terms & conditions</button>
+  </div>
+
 </ion-view>
