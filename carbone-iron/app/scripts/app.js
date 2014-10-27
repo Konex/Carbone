@@ -36,6 +36,11 @@ angular.module('CarboneIron', ['ionic', 'config', 'CarboneIron.services', 'Carbo
       controller: 'SignInCtrl'
     })
 
+    .state('createaccount', {
+      url: '/create-account',
+      templateUrl: 'templates/create-account.html'
+    })
+
     .state('forgotpassword', {
       url: '/forgot-password',
       templateUrl: 'templates/forgot-password.html'
