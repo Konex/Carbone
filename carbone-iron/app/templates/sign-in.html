@@ -1,8 +1,8 @@
-<ion-view title="sign-in">
+<ion-view title="Sign in">
   <ion-content>
 
     <p>
-      <h1 class="title text-center balanced">Carbone</h1>
+        <h1 class="title text-center balanced">Carbone</h1>
     </p>
 
     <form name="signInForm" ng-controller="SignInCtrl"
@@ -17,10 +17,12 @@
           <input type="password" id="password" placeholder="Password"
                  ng-model="credentials.password">
       </label>
-      <button type="submit" class="button button-block button-positive"
-        ng-click="signIn(user)">
-          Sign in
-      </button>
+      <div class="padding-horizontal">
+        <button type="submit" class="button button-block button-positive"
+          ng-click="signIn(user)">
+            Sign in
+        </button>
+      </div>
     </form>
 
     <p class="text-center">
@@ -34,8 +36,8 @@
   </ion-content>
 
   <div class="bar bar-footer bar-balanced">
-    <button class="button button-clear">Konex</button>
-    <button class="button button-clear">Terms & conditions</button>
+      <button class="button button-clear">Konex</button>
+      <button class="button button-clear">Terms & conditions</button>
   </div>
 
 </ion-view>
