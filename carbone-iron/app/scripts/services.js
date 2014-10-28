@@ -29,20 +29,48 @@ angular.module('CarboneIron.services', [])
 
 
 /**
- * Sign in service.
+ * Session service.
  */
-.factory('SignInService', function($http) {
-  return {
-    signIn: function(userName, password) {
-      return $http.get('https://api.Carbone.com/signin')
-      .then(function(response) {
-        var successful, userId, authToken;
-
-        successful = response.data.successful;
-        userId = response.data.userId;
-        authToken = response.data.authToken;
-
-      });
-    }
+.service('Session', function () {
+  this.create = function (sessionId, userId, userRole) {
+    this.id = sessionId;
+    this.userId = userId;
+    this.userRole = userRole;
   };
+  this.destroy = function () {
+    this.id = null;
+    this.userId = null;
+    this.userRole = null;
+  };
+  return this;
+})
+
+
+/**
+ * Auth service.
+ */
+.factory('AuthService', function($http, Session) {
+
+  var authService = {};
+
+  authService.signin = function(credentials) {
+    return $http
+    .post('/signin', credentials)
+    .then(function(res) {
+        Session.create(res.data.id, res.data.user.id,
+                       res.data.user.role);
+        return res.data.user;
+    });
+  };
+
+  AuthService.isAuthorized = function(authorizedRoles) {
+    if (!angular.isArray(authorizedRoles)) {
+      authorizedRoles = [authorizedRoles];
+    }
+
+    return (authService.isAuthenticated() &&
+      authorizedRoles.indexOf(Session.userRole) !== -1);
+  };
+
+  return authService;
 });
