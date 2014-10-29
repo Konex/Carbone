@@ -11,6 +11,27 @@ angular.module('CarboneIron.controllers', [])
 })
 
 
+.constant('USER_ROLES', {
+  all: '*',
+  admin: 'admin',
+  editor: 'editor',
+  guest: 'guest'
+})
+
+
+.controller('ApplicationController',
+  function ($scope, USER_ROLES, AuthService) {
+
+  $scope.currentUser = null;
+  $scope.userRoles = USER_ROLES;
+  $scope.isAuthorized = AuthService.isAuthorized;
+
+  $scope.setCurrentUser = function(user) {
+    $scope.currentUser = user;
+  };
+})
+
+
 // A simple controller that fetches a list of data from a service
 .controller('PetIndexCtrl', function($scope, PetService) {
   // "Pets" is a service returning mock data (services.js)
