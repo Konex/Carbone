@@ -8,6 +8,23 @@ angular.module('CarboneIron', ['ionic', 'config',
 'CarboneIron.services', 'CarboneIron.controllers'])
 
 
+.constant('AUTH_EVENTS', {
+  loginSuccess: 'auth-login-success',
+  loginFailed: 'auth-login-failed',
+  logoutSuccess: 'auth-logout-success',
+  sessionTimeout: 'auth-session-timeout',
+  notAuthenticated: 'auth-not-authenticated',
+  notAuthorized: 'auth-not-authorized'
+})
+
+
+.constant('USER_ROLES', {
+  all: '*',
+  admin: 'admin',
+  member: 'member'
+})
+
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory
@@ -23,21 +40,24 @@ angular.module('CarboneIron', ['ionic', 'config',
 })
 
 
-.constant('AUTH_EVENTS', {
-  loginSuccess: 'auth-login-success',
-  loginFailed: 'auth-login-failed',
-  logoutSuccess: 'auth-logout-success',
-  sessionTimeout: 'auth-session-timeout',
-  notAuthenticated: 'auth-not-authenticated',
-  notAuthorized: 'auth-not-authorized'
-})
+.run(function ($rootScope, AUTH_EVENTS, AuthService) {
 
+  $rootScope.$on('$stateChangeStart', function (event, next) {
 
-.constant('USER_ROLES', {
-  all: '*',
-  admin: 'admin',
-  editor: 'editor',
-  guest: 'guest'
+    var authorizedRoles = next.data.authorizedRoles;
+
+    if (!AuthService.isAuthorized(authorizedRoles)) {
+
+      event.preventDefault();
+      if (AuthService.isAuthenticated()) {
+        // user is not allowed
+        $rootScope.$broadcast(AUTH_EVENTS.notAuthorized);
+      } else {
+        // user is not logged in
+        $rootScope.$broadcast(AUTH_EVENTS.notAuthenticated);
+      }
+    }
+  });
 })
 
 
@@ -47,17 +67,26 @@ angular.module('CarboneIron', ['ionic', 'config',
     .state('signin', {
       url: '/sign-in',
       templateUrl: 'templates/sign-in.html',
-      controller: 'SignInCtrl'
+      controller: 'SignInCtrl',
+      data: {
+        authorizedRoles: [USER_ROLES.all]
+      }
     })
 
     .state('createaccount', {
       url: '/create-account',
-      templateUrl: 'templates/create-account.html'
+      templateUrl: 'templates/create-account.html',
+      data: {
+        authorizedRoles: [USER_ROLES.all]
+      }
     })
 
     .state('forgotpassword', {
       url: '/forgot-password',
-      templateUrl: 'templates/forgot-password.html'
+      templateUrl: 'templates/forgot-password.html',
+      data: {
+        authorizedRoles: [USER_ROLES.all]
+      }
     })
 
     // setup an abstract state for the tabs directive
@@ -76,6 +105,9 @@ angular.module('CarboneIron', ['ionic', 'config',
           templateUrl: 'templates/pet-index.html',
           controller: 'PetIndexCtrl'
         }
+      },
+      data: {
+        authorizedRoles: [USER_ROLES.admin, USER_ROLES.member]
       }
     })
 
@@ -86,6 +118,9 @@ angular.module('CarboneIron', ['ionic', 'config',
           templateUrl: 'templates/pet-detail.html',
           controller: 'PetDetailCtrl'
         }
+      },
+      data: {
+        authorizedRoles: [USER_ROLES.admin, USER_ROLES.member]
       }
     })
 
@@ -95,6 +130,9 @@ angular.module('CarboneIron', ['ionic', 'config',
         'adopt-tab': {
           templateUrl: 'templates/adopt.html'
         }
+      },
+      data: {
+        authorizedRoles: [USER_ROLES.admin, USER_ROLES.member]
       }
     })
 
@@ -104,6 +142,9 @@ angular.module('CarboneIron', ['ionic', 'config',
         'about-tab': {
           templateUrl: 'templates/about.html'
         }
+      },
+      data: {
+        authorizedRoles: [USER_ROLES.admin, USER_ROLES.member]
       }
     });
 
