@@ -1,4 +1,5 @@
 'use strict';
+
 angular.module('CarboneIron.constants', [])
 
 .constant('AUTH_EVENTS', {
