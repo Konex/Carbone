@@ -353,7 +353,17 @@ module.exports = function (grunt) {
     //   }
     // },
     // concat: {
-    //   dist: {}
+    //   js: {
+    //     src: [
+    //         'scripts/config.js',
+    //         'scripts/app.js',
+    //         'scripts/controllers.js',
+    //         'scripts/services.js',
+    //         'scripts/constants.js',
+    //         'scripts/directives.js'
+    //     ],
+    //     dest: 'www/scripts'
+    //   }
     // },
 
     // Test settings
