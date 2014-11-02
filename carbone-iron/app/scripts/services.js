@@ -47,7 +47,7 @@ angular.module('CarboneIron.services', [])
 
 
 /**
- * Auth service.
+ * Auth.
  */
 
  .config(function ($httpProvider) {
@@ -60,8 +60,7 @@ angular.module('CarboneIron.services', [])
  })
 
 
- .factory('AuthInterceptor', function ($rootScope, $q,
-                                      AUTH_EVENTS) {
+ .factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {
   return {
     responseError: function (response) {
       $rootScope.$broadcast({
