@@ -22,7 +22,7 @@ angular.module('CarboneIron.directives', [])
       });
     }
   };
-});
+})
 
 
 .directive('signInDialog', function (AUTH_EVENTS) {
