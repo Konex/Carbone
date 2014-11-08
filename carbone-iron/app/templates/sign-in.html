@@ -1,12 +1,14 @@
 <ion-view title="Sign in">
   <ion-content>
 
+  <iframe src="#/sink.html" name="sink" style="display:none"></iframe>
+
     <p>
         <h1 class="title text-center balanced">Carbone</h1>
     </p>
 
-    <form name="signInForm" ng-controller="SignInCtrl"
-          ng-submit="signin(credentials)" novalidate>
+    <form name="signInForm" action="sink.html" target="sink" method="post" ng-controller="SignInCtrl"
+          ng-submit="signin(credentials)" novalidate form-autofill-fix>
 
       <label class="item item-input">
           <i class="icon ion-person placeholder-icon"></i>
