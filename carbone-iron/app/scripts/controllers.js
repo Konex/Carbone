@@ -40,7 +40,7 @@ angular.module('CarboneIron.controllers', [])
     password: ''
     };
 
-    $scope.signin = function () {
+    $scope.signin = function (credentials) {
       AuthService.signin(credentials).then(
         function(user) {
           $rootScope.$broadcast(AUTH_EVENTS.signinSuccuss);

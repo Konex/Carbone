@@ -78,9 +78,9 @@ angular.module('CarboneIron.services', [])
 .factory('AuthService', function ($http, Session, USER_ROLES) {
   var authService = {};
 
-  authService.login = function (credentials) {
+  authService.signin = function (credentials) {
     return $http
-      .post('/login', credentials)
+      .post('/signin', credentials)
       .then(function (res) {
         Session.create(res.data.id, res.data.user.id,
                        res.data.user.role);
