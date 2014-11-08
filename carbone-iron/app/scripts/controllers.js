@@ -10,6 +10,8 @@ angular.module('CarboneIron.controllers', [])
   $scope.userRoles = USER_ROLES;
   $scope.isAuthorized = AuthService.isAuthorized;
 
+  // Shadow copying from parent scope to child scope
+  // so we need to access parent scope variable this way. 
   $scope.setCurrentUser = function(user) {
     $scope.currentUser = user;
   };
