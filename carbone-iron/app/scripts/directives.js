@@ -12,11 +12,10 @@ angular.module('CarboneIron.directives', [])
           .unbind('submit')
           .bind('submit', function (event) {
             event.preventDefault();
-            element
-              .find('input, textarea, select')
-              .trigger('input')
-              .trigger('change')
-              .trigger('keydown');
+            element.find('input')
+            .triggerHandler('input')
+            .triggerHandler('change')
+            .triggerHandler('keydown');
             scope.$apply(attrs.ngSubmit);
           });
       });
