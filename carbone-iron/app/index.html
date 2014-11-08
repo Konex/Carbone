@@ -28,7 +28,7 @@
       <ion-nav-back-button class="button-icon button-clear ion-ios7-arrow-back">
       </ion-nav-back-button>
       <ion-nav-buttons side="right" ng-if="currentUser">
-      <button class="button" ng-click="userProfile()">
+      <button class="button" ng-cloak ng-click="userProfile()">
         {{ currentUser.name }}
       </button>
     </ion-nav-buttons>
