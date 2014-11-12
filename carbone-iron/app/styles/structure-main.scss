@@ -3,6 +3,14 @@
 }
 
 
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+
+
 .ionic-logo {
 	display: block;
 	margin: 15px auto;
@@ -12,20 +20,33 @@
 
 
 html {
+	font-size: 62.5%;
+}
 
-	header{
 
+
+.sign-in-form {
+
+	h1 {
+		margin-top: 0px;
+		margin-bottom: 25px;
+		font-weight: bold;
+		@include font-size(5);
 	}
 
-	body {
+	p {
+		margin-top: 30px;
+	}
 
+	a {
+		text-decoration: none;
 	}
 }
 
 
-.sign-in-form {
-	a {
-		text-decoration: none;
-	}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
 }
 
