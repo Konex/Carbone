@@ -21,9 +21,12 @@ angular.module('CarboneIron', ['ionic', 'config', 'CarboneIron.directives',
 
 .run(function ($rootScope, AUTH_EVENTS, AuthService) {
 
-  $rootScope.$on('$stateChangeStart', function (event, next) {
+  $rootScope.$on('$stateChangeStart', 
+    function (event, toState, toParams, fromState, fromParams) {
 
-    var authorizedRoles = next.data.authorizedRoles;
+    $rootScope.isSignInPage = (toState.url === '/sign-in'); 
+
+    var authorizedRoles = toState.data.authorizedRoles;
 
     if (!AuthService.isAuthorized(authorizedRoles)) {
 
