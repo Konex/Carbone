@@ -26,12 +26,18 @@ html {
 
 
 .sign-in-form {
+	padding-left: 30px;
+	padding-right: 30px; 
 
 	h1 {
 		margin-top: 0px;
 		margin-bottom: 25px;
 		font-weight: bold;
 		@include font-size(5);
+	}
+
+	label {
+		margin: 0 20px 15px 20px;
 	}
 
 	p {
