@@ -3,7 +3,7 @@
 angular.module('CarboneIron.controllers', [])
 
 
-.controller('ApplicationController',
+.controller('ApplicationController',  
   function ($scope, USER_ROLES, AuthService) {
 
   $scope.currentUser = null;
@@ -30,6 +30,11 @@ angular.module('CarboneIron.controllers', [])
   // "Pets" is a service returning mock data (services.js)
   $scope.pet = PetService.get($stateParams.petId);
 })
+
+
+
+
+
 
 
 .controller('SignInCtrl', function($scope, $rootScope,
