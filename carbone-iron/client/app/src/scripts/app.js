@@ -1,7 +1,14 @@
 'use strict';
 
-angular.module('CarboneIron', ['ionic', 'config', 'CarboneIron.directives',
-'CarboneIron.constants', 'CarboneIron.services', 'CarboneIron.controllers'])
+angular.module('CarboneIron', [
+  'ionic', 
+  'config', 
+  'CarboneIron.directives', 
+  'CarboneIron.constants', 
+  'CarboneIron.services', 
+  'CarboneIron.controllers', 
+  'signin'
+  ])
 
 
 .run(function($ionicPlatform) {
@@ -19,7 +26,9 @@ angular.module('CarboneIron', ['ionic', 'config', 'CarboneIron.directives',
 })
 
 
-.run(function ($rootScope, AUTH_EVENTS, AuthService) {
+.run(['$rootScope', 'AUTH_EVENTS', 'AuthService',
+
+  function ($rootScope, AUTH_EVENTS, AuthService) {
 
   $rootScope.$on('$stateChangeStart', 
     function (event, toState, toParams, fromState, fromParams) {
@@ -40,20 +49,22 @@ angular.module('CarboneIron', ['ionic', 'config', 'CarboneIron.directives',
       }
     }
   });
-})
+}])
 
 
-.config(function($stateProvider, $urlRouterProvider, USER_ROLES) {
+.config(['$stateProvider', '$urlRouterProvider', 'USER_ROLES',
+
+  function($stateProvider, $urlRouterProvider, USER_ROLES) {
 
   $stateProvider
-    .state('signin', {
-      url: '/sign-in',
-      templateUrl: 'templates/sign-in.html',
-      controller: 'SignInCtrl',
-      data: {
-        authorizedRoles: [USER_ROLES.all]
-      }
-    })
+  //   .state('signin', {
+  //     url: '/sign-in',
+  //     templateUrl: 'templates/sign-in.html',
+  //     controller: 'SignInCtrl',
+  //     data: {
+  //       authorizedRoles: [USER_ROLES.all]
+  //     }
+  //   })
 
     .state('createaccount', {
       url: '/create-account',
@@ -132,4 +143,4 @@ angular.module('CarboneIron', ['ionic', 'config', 'CarboneIron.directives',
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/sign-in');
-});
+}]);

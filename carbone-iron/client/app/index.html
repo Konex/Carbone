@@ -12,10 +12,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:css({.tmp,app}) styles/structure-main.css -->
     <link rel="stylesheet" href="styles/structure-main.css">
     <link rel="stylesheet" href="styles/skin-main.css">
-    <!-- endbuild -->
   </head>
 
   <body ng-controller="ApplicationController" animation="slide-left-right-ios7">
@@ -59,14 +57,19 @@
     <!-- cordova script (this will be a 404 during development) -->
     <!--<script src="cordova.js"></script>-->
 
-    <!-- build:js scripts/scripts.js -->
-    <script src="scripts/config.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers.js"></script>
-    <script src="scripts/services.js"></script>
-    <script src="scripts/constants.js"></script>
-    <script src="scripts/directives.js"></script>
-    <!-- endbuild -->
+    <script src="src/scripts/config.js"></script>
+    <script src="src/scripts/app.js"></script>
+    <script src="src/scripts/controllers.js"></script>
+    <script src="src/scripts/services.js"></script>
+    <script src="src/scripts/constants.js"></script>
+    <script src="src/scripts/directives.js"></script>
+
+    <script src="src/signin/controller.js"></script>
+    <script src="src/signin/service.js"></script>
+    <script src="src/signin/signin.js"></script>
+
+    <script src="src/common/security/auth.js"></script>
+    <script src="src/common/security/constants.js"></script>
 
     <div login-dialog ng-if="!isAuthorized"></div>
 </body>

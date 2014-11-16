@@ -21,9 +21,9 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: 'app',
-      scripts: 'scripts',
+      scripts: 'src',
       styles: 'styles',
-      images: 'images'
+      images: 'assets/images'
     },
 
     // Environment Variables for Angular App
@@ -35,13 +35,13 @@ module.exports = function (grunt) {
         space: '  ',
         wrap: '"use strict";\n\n {%= __ngModule %}',
         name: 'config',
-        dest: '<%= yeoman.app %>/scripts/config.js'
+        dest: '<%= yeoman.app %>/src/scripts/config.js'
       },
       development: {
         constants: {
           ENV: {
             name: 'development',
-            apiEndpoint: 'http://dev.yoursite.com:10000/'
+            apiEndpoint: 'http://dev.carbone.com:10000/'
           }
         }
       },
@@ -83,6 +83,10 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/*.html',
           '<%= yeoman.app %>/templates/**/*.html',
+          
+          // TODO: restructure
+          '<%= yeoman.app %>/src/**/*.html',
+          
           '.tmp/<%= yeoman.styles %>/**/*.css',
           '<%= yeoman.app %>/<%= yeoman.images %>/**/*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -213,38 +217,39 @@ module.exports = function (grunt) {
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
-    useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
-      options: {
-        dest: 'www',
-        flow: {
-          html: {
-            steps: {
-              js: ['concat', 'uglifyjs'],
-              css: ['cssmin']
-            },
-            post: {}
-          }
-        }
-      }
-    },
+    // useminPrepare: {
+    //   html: '<%= yeoman.app %>/index.html',
+    //   options: {
+    //     dest: 'www',
+    //     flow: {
+    //       html: {
+    //         steps: {
+    //           js: ['concat', 'uglifyjs'],
+    //           css: ['cssmin']
+    //         },
+    //         post: {}
+    //       }
+    //     }
+    //   }
+    // },
 
-    // Performs rewrites based on the useminPrepare configuration
-    usemin: {
-      html: ['www/**/*.html'],
-      css: ['www/<%= yeoman.styles %>/**/*.css'],
-      options: {
-        assetsDirs: ['www']
-      }
-    },
+    // // Performs rewrites based on the useminPrepare configuration
+    // usemin: {
+    //   html: ['www/**/*.html'],
+    //   css: ['www/<%= yeoman.styles %>/**/*.css'],
+    //   options: {
+    //     assetsDirs: ['www']
+    //   }
+    // },
 
-    // The following *-min tasks produce minified files in the dist folder
-    cssmin: {
-      options: {
-        root: '<%= yeoman.app %>',
-        noRebase: true
-      }
-    },
+    // // The following *-min tasks produce minified files in the dist folder
+    // cssmin: {
+    //   options: {
+    //     root: '<%= yeoman.app %>',
+    //     noRebase: true
+    //   }
+    // },
+
     htmlmin: {
       dist: {
         options: {
@@ -256,7 +261,12 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'www',
-          src: ['*.html', 'templates/**/*.html'],
+          src: [
+            '*.html',
+            'templates/**/*.html',
+            // TODO: restructure 
+            'src/**/*.html'
+          ],
           dest: 'www'
         }]
       }
@@ -265,24 +275,32 @@ module.exports = function (grunt) {
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>',
-          dest: 'www',
-          src: [
-            'images/**/*.{png,jpg,jpeg,gif,webp,svg}',
-            '*.html',
-            'templates/**/*.html',
-            'fonts/*'
-          ]
-        }, {
-          expand: true,
-          cwd: '.tmp/<%= yeoman.images %>',
-          dest: 'www/<%= yeoman.images %>',
-          src: ['generated/*']
-        }]
+        files: 
+        [
+          {
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>',
+            dest: 'www',
+            src: [
+              'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+              'assets/fonts/*',
+              '*.html',
+              'templates/**/*.html',
+
+              // TODO: restructure
+              'src/**/*.html'
+            ]
+          }, 
+          {
+            expand: true,
+            cwd: '.tmp/<%= yeoman.images %>',
+            dest: 'www/<%= yeoman.images %>',
+            src: ['generated/*']
+          }
+        ]
       },
+
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/<%= yeoman.styles %>',
@@ -333,38 +351,39 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       'www/<%= yeoman.styles %>/main.css': [
-    //         '.tmp/<%= yeoman.styles %>/**/*.css',
-    //         '<%= yeoman.app %>/<%= yeoman.styles %>/**/*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       'www/<%= yeoman.scripts %>/scripts.js': [
-    //         'www/<%= yeoman.scripts %>/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   js: {
-    //     src: [
-    //         'scripts/config.js',
-    //         'scripts/app.js',
-    //         'scripts/controllers.js',
-    //         'scripts/services.js',
-    //         'scripts/constants.js',
-    //         'scripts/directives.js'
-    //     ],
-    //     dest: 'www/scripts'
-    //   }
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          'www/<%= yeoman.styles %>/main.css': [
+            '.tmp/<%= yeoman.styles %>/**/*.css',
+            '<%= yeoman.app %>/<%= yeoman.styles %>/**/*.css'
+          ]
+        }
+      }
+    },
+    uglify: {
+      dist: {
+        files: {
+          'www/<%= yeoman.scripts %>/scripts.js': [
+            'www/<%= yeoman.scripts %>/scripts.js'
+          ]
+        }
+      }
+    },
+    concat: {
+      js: {
+        src: [ 
+            'src/**/*.js'
+            // 'src/scripts/config.js',
+            // 'src/scripts/app.js',
+            // 'src/scripts/controllers.js',
+            // 'src/scripts/services.js',
+            // 'src/scripts/constants.js',
+            // 'src/scripts/directives.js'
+        ],
+        dest: 'www/scripts'
+      }
+    },
 
     // Test settings
     // These will override any config options in karma.conf.js if you create it.
@@ -390,7 +409,8 @@ module.exports = function (grunt) {
         singleRun: false,
         preprocessors: {
           // Update this if you change the yeoman config path
-          'app/scripts/**/*.js': ['coverage']
+          'app/src/**/*.js': ['coverage']
+          //'app/scripts/**/*.js': ['coverage']
         },
         coverageReporter: {
           reporters: [
@@ -523,7 +543,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'ngconstant:production',
     'wiredep',
-    'useminPrepare',
+    //'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
     'concat',
@@ -531,7 +551,7 @@ module.exports = function (grunt) {
     'copy:dist',
     'cssmin',
     'uglify',
-    'usemin',
+    //'usemin',
     'htmlmin',
     'cordova:build'
   ]);
