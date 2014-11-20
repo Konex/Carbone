@@ -217,38 +217,38 @@ module.exports = function (grunt) {
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
-    // useminPrepare: {
-    //   html: '<%= yeoman.app %>/index.html',
-    //   options: {
-    //     dest: 'www',
-    //     flow: {
-    //       html: {
-    //         steps: {
-    //           js: ['concat', 'uglifyjs'],
-    //           css: ['cssmin']
-    //         },
-    //         post: {}
-    //       }
-    //     }
-    //   }
-    // },
+    useminPrepare: {
+      html: '<%= yeoman.app %>/index.html',
+      options: {
+        dest: 'www',
+        flow: {
+          html: {
+            steps: {
+              js: ['concat', 'uglifyjs'],
+              css: ['cssmin']
+            },
+            post: {}
+          }
+        }
+      }
+    },
 
-    // // Performs rewrites based on the useminPrepare configuration
-    // usemin: {
-    //   html: ['www/**/*.html'],
-    //   css: ['www/<%= yeoman.styles %>/**/*.css'],
-    //   options: {
-    //     assetsDirs: ['www']
-    //   }
-    // },
+    // Performs rewrites based on the useminPrepare configuration
+    usemin: {
+      html: ['www/**/*.html'],
+      css: ['www/<%= yeoman.styles %>/**/*.css'],
+      options: {
+        assetsDirs: ['www']
+      }
+    },
 
-    // // The following *-min tasks produce minified files in the dist folder
-    // cssmin: {
-    //   options: {
-    //     root: '<%= yeoman.app %>',
-    //     noRebase: true
-    //   }
-    // },
+    // The following *-min tasks produce minified files in the dist folder
+    cssmin: {
+      options: {
+        root: '<%= yeoman.app %>',
+        noRebase: true
+      }
+    },
 
     htmlmin: {
       dist: {
@@ -348,42 +348,48 @@ module.exports = function (grunt) {
       ]
     },
 
+
+
+
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    cssmin: {
-      dist: {
-        files: {
-          'www/<%= yeoman.styles %>/main.css': [
-            '.tmp/<%= yeoman.styles %>/**/*.css',
-            '<%= yeoman.app %>/<%= yeoman.styles %>/**/*.css'
-          ]
-        }
-      }
-    },
-    uglify: {
-      dist: {
-        files: {
-          'www/<%= yeoman.scripts %>/scripts.js': [
-            'www/<%= yeoman.scripts %>/scripts.js'
-          ]
-        }
-      }
-    },
-    concat: {
-      js: {
-        src: [ 
-            'src/**/*.js'
-            // 'src/scripts/config.js',
-            // 'src/scripts/app.js',
-            // 'src/scripts/controllers.js',
-            // 'src/scripts/services.js',
-            // 'src/scripts/constants.js',
-            // 'src/scripts/directives.js'
-        ],
-        dest: 'www/scripts'
-      }
-    },
+    // cssmin: {
+    //   dist: {
+    //     files: {
+    //       'www/<%= yeoman.styles %>/main.css': [
+    //         '.tmp/<%= yeoman.styles %>/**/*.css',
+    //         '<%= yeoman.app %>/<%= yeoman.styles %>/**/*.css'
+    //       ]
+    //     }
+    //   }
+    // },
+    // uglify: {
+    //   dist: {
+    //     files: {
+    //       'www/<%= yeoman.scripts %>/scripts.js': [
+    //         'www/<%= yeoman.scripts %>/scripts.js'
+    //       ]
+    //     }
+    //   }
+    // },
+    // concat: {
+    //   js: {
+    //     src: [ 
+    //         'src/**/*.js'
+    //         // 'src/scripts/config.js',
+    //         // 'src/scripts/app.js',
+    //         // 'src/scripts/controllers.js',
+    //         // 'src/scripts/services.js',
+    //         // 'src/scripts/constants.js',
+    //         // 'src/scripts/directives.js'
+    //     ],
+    //     dest: 'www/scripts'
+    //   }
+    // },
+
+
+
 
     // Test settings
     // These will override any config options in karma.conf.js if you create it.
