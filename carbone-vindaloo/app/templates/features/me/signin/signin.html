@@ -5,29 +5,34 @@
   
     <h1 class="title text-center balanced">Carbone</h1>
   
-    <form name="signInForm" action="sink.html" target="sink" method="post" ng-controller="SignInCtrl"
-          ng-submit="signin(credentials)" novalidate form-autofill-fix>
+    <form name="signInForm" action="sink.html" target="sink" method="post" ng-controller="SignInCtrl" ng-submit="signin(credentials)" novalidate form-autofill-fix>
 
       <label class="item item-input">
           <i class="icon ion-person placeholder-icon"></i>
-          <input type="text" id="username" placeholder="Username"
+          <input type="text" 
+                 id="username" 
+                 placeholder="Username" 
                  ng-model="credentials.username">
       </label>
 
       <label class="item item-input">
           <i class="icon ion-key placeholder-icon"></i>
-          <input type="password" id="password" placeholder="Password"
+          <input type="password" 
+                 id="password" 
+                 placeholder="Password"
                  ng-model="credentials.password">
       </label>
 
       <div class="padding-horizontal">
-        <button type="submit" class="button button-block button-positive"
-          ng-click="signIn(user)">
+        <button type="submit" 
+                ng-click="signin(credentials)" 
+                class="button button-block button-positive">
             Sign in
         </button>
 
-        <button type="submit" class="button button-block button-calm"
-          ng-click="googleSignin(user)">
+        <button type="submit" 
+                class="button button-block button-calm"
+                ng-click="googleSignin(user)">
             Sign in with Google
         </button>
 

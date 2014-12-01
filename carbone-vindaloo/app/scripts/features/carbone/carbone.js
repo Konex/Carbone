@@ -7,16 +7,20 @@ var carbone = angular.module('carbone', [
 carbone.config([
 	'$stateProvider',
     '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
-
-	$stateProvider
-	.state('tab.carbone', {
-			url: '/carbone',
-			views: {
-			'carbone-tab': {
-  				templateUrl: 'templates/features/carbone/carbone.html',
-  				controller: 'CarboneCtrl'
-			}
-		}
-	})    	
-}]);
+    'USER_ROLES',
+    function($stateProvider, $urlRouterProvider, USER_ROLES) {
+		$stateProvider
+		.state('tab.carbone', {
+				url: '/carbone',
+				views: {
+				'carbone-tab': {
+	  				templateUrl: 'templates/features/carbone/carbone.html',
+	  				controller: 'CarboneCtrl'
+				}
+			},
+			data: {
+	            authorizedRoles: [USER_ROLES.member]
+	        }
+		})    	
+	}
+]);

@@ -1,19 +1,18 @@
-//
-// Global place for creating, registering and retrieving Angular modules.
-//
 'use strict';
 
-angular.module('carbone-vindaloo', [
+var carbone = angular.module('carbone-vindaloo', [
   'ionic', 
   'config',
+  'applicationController',
   'common.security', 
   'me',
   'inox',
   'carbone',
-  'friends'])
+  'friends'
+]);
 
 
-.run(function($ionicPlatform) {
+carbone.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -25,9 +24,10 @@ angular.module('carbone-vindaloo', [
       StatusBar.styleDefault();
     }
   });
-})
+});
 
-.run(['$rootScope', 'AUTH_EVENTS', 'AuthService',
+
+carbone.run(['$rootScope', 'AUTH_EVENTS', 'AuthService',
 
   function ($rootScope, AUTH_EVENTS, AuthService) {
 
@@ -50,12 +50,14 @@ angular.module('carbone-vindaloo', [
       }
     }
   });
-}])
+}]);
 
-.config(function($stateProvider, $urlRouterProvider) {
+
+carbone.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+
+  //$locationProvider.html5Mode(true);
 
   $stateProvider
-    // setup an abstract state for the tabs directive
     .state('tab', {
       url: '/tab',
       abstract: true,
@@ -64,4 +66,3 @@ angular.module('carbone-vindaloo', [
 
   $urlRouterProvider.otherwise('/signin');
 });
-

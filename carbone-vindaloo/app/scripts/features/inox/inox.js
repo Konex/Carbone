@@ -1,22 +1,27 @@
 'use strict';
 
 var inox = angular.module('inox', [
-  'inox.controller'
+    'inox.controller'
 ]);
 
 inox.config([
-  '$stateProvider',
-  '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider) {
+    '$stateProvider',
+    '$urlRouterProvider',
+    'USER_ROLES',
 
-  $stateProvider
-  .state('tab.inox', {
-      url: '/inox',
-      views: {
-      'inox-tab': {
-          templateUrl: 'templates/features/inox/inox.html',
-          controller: 'InoxCtrl'
-      }
+    function($stateProvider, $urlRouterProvider, USER_ROLES) {
+        $stateProvider
+        .state('tab.inox', {    
+            url: '/inox',
+            views: {
+                'inox-tab': {
+                    templateUrl: 'templates/features/inox/inox.html',
+                    controller: 'InoxCtrl'
+                }
+            },
+            data: {
+                authorizedRoles: [USER_ROLES.member]
+            }
+        })      
     }
-  })      
-}]);
+]);

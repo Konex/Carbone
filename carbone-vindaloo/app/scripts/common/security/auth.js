@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('common.security.auth', [])
+var auth = angular.module('common.security.auth', []);
 
 /**
  * Session service.
  */
-.service('Session', function () {
+auth.service('Session', function () {
   this.create = function (sessionId, userId, userRole) {
     this.id = sessionId;
     this.userId = userId;
@@ -17,24 +17,24 @@ angular.module('common.security.auth', [])
     this.userRole = null;
   };
   return this;
-})
+});
 
 
 /**
  * Auth.
  */
 
- .config(function ($httpProvider) {
+ auth.config(function ($httpProvider) {
    $httpProvider.interceptors.push([
      '$injector',
      function ($injector) {
        return $injector.get('AuthInterceptor');
      }
    ]);
- })
+ });
 
 
- .factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {
+ auth.factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {
   return {
     responseError: function (response) {
       $rootScope.$broadcast({
@@ -46,19 +46,19 @@ angular.module('common.security.auth', [])
       return $q.reject(response);
     }
   };
-})
+});
 
 
-.factory('AuthService', function ($http, Session, USER_ROLES) {
+auth.factory('AuthService', function ($http, Session, USER_ROLES) {
   var authService = {};
 
   authService.signin = function (credentials) {
     return $http
-      .post('/signin', credentials)
+      .get('scripts/common/stubs/me/signin/data.json', credentials)
       .then(function (res) {
-        Session.create(res.data.id, res.data.user.id,
-                       res.data.user.role);
-        return res.data.user;
+        Session.create(res.data.value[0].sessionId, res.data.value[0].id,
+                       res.data.value[0].role);
+        return res.data;
       });
   };
 
@@ -73,8 +73,9 @@ angular.module('common.security.auth', [])
 
     if(authorizedRoles[0] == USER_ROLES.all) return true;
 
+    // TODO: allow user with multiple roles.
     return (authService.isAuthenticated() &&
-      authorizedRoles.indexOf(Session.userRole) !== -1);
+      authorizedRoles.indexOf(Session.userRole[0]) !== -1);
   };
 
   return authService;

@@ -18,7 +18,7 @@
     <!-- endbuild -->
   </head>
 
-  <body ng-app="carbone-vindaloo" animation="slide-left-right-ios7">
+  <body ng-app="carbone-vindaloo" animation="slide-left-right-ios7" ng-controller="ApplicationController">
 
     <ion-nav-bar class="bar-positive">
       <ion-nav-back-button class="button-icon button-clear ion-ios7-arrow-back">
@@ -46,6 +46,7 @@
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/config.js"></script>
         <script src="scripts/app.js"></script>
+        <script src="scripts/applicationController.js"></script>
 
         <script src="scripts/common/security/security.js"></script>
         <script src="scripts/common/security/auth.js"></script>
@@ -66,6 +67,7 @@
         <script src="scripts/features/me/signin/signin.js"></script>
         <script src="scripts/features/me/signin/controller.js"></script>
         <script src="scripts/features/me/signin/service.js"></script>
+        <script src="scripts/features/me/signin/directives.js"></script>
         <!-- endbuild -->
 </body>
 </html>

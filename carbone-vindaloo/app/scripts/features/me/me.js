@@ -11,18 +11,18 @@ me.config([
     'USER_ROLES',
     
     function($stateProvider, $urlRouterProvider, USER_ROLES) {
-
-	$stateProvider
-	.state('tab.me', {
+		$stateProvider
+		.state('tab.me', {
 			url: '/me',
 			views: {
-			'me-tab': {
-  				templateUrl: 'templates/features/me/me.html',
-  				controller: 'MeCtrl'
+				'me-tab': {
+	  				templateUrl: 'templates/features/me/me.html',
+	  				controller: 'MeCtrl'
+				}
 			},
 			data: {
-	        	authorizedRoles: [USER_ROLES.member]
-	      }
-		}
-	})    	
-}]);
+	        	authorizedRoles: [USER_ROLES.member, USER_ROLES.admin, USER_ROLES.editor]
+	      	}
+		})    	
+	}
+]);

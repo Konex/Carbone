@@ -3,9 +3,9 @@
 angular.module('common.security.constants', [])
 
 .constant('AUTH_EVENTS', {
-  loginSuccess: 'auth-login-success',
-  loginFailed: 'auth-login-failed',
-  logoutSuccess: 'auth-logout-success',
+  signinSuccess: 'auth-login-success',
+  signinFailed: 'auth-login-failed',
+  signoutSuccess: 'auth-logout-success',
   sessionTimeout: 'auth-session-timeout',
   notAuthenticated: 'auth-not-authenticated',
   notAuthorized: 'auth-not-authorized'
@@ -15,5 +15,6 @@ angular.module('common.security.constants', [])
   all: '*',
   admin: 'admin',
   editor: 'editor',
+  member: 'member',
   guest: 'guest'
 });
