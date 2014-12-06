@@ -8,9 +8,9 @@ var me = angular.module('me', [
 me.config([
 	'$stateProvider',
     '$urlRouterProvider',
-    'USER_ROLES',
+    'ACCESS_LEVEL',
     
-    function($stateProvider, $urlRouterProvider, USER_ROLES) {
+    function($stateProvider, $urlRouterProvider, ACCESS_LEVEL) {
 		$stateProvider
 		.state('tab.me', {
 			url: '/me',
@@ -21,7 +21,7 @@ me.config([
 				}
 			},
 			data: {
-	        	authorizedRoles: [USER_ROLES.member, USER_ROLES.admin, USER_ROLES.editor]
+	        	accessLevel: ACCESS_LEVEL.MEMBER 
 	      	}
 		})    	
 	}

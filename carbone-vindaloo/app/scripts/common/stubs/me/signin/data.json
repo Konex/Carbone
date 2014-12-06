@@ -6,8 +6,9 @@
             "avatarImageUrl": "imgages/me/marcsofinowski.png", 
             "name": "Marc Sofinowski", 
             "email": "marcsofinowski@email.com",
-            "role": [
-                "admin"
+            "roles": [
+                "admin",
+                "member"
             ] 
         }
     ]

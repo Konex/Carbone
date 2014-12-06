@@ -12,28 +12,27 @@ securityConstants.constant('AUTH_EVENTS', {
 });
 
 securityConstants.constant('USER_ROLES', {
-    all: '*',
-    admin: 'admin',
-    editor: 'editor',
-    member: 'member',
-    guest: 'guest'
-});
-
-securityConstants.constant('USER_ROLE_MASKS', {
     all: 1,
     member: 2,
     friend: 4,
     admin: 8
 });
 
-securityConstants.accessLevels = {
-    ALL:     USER_ROLE_MASKS.all |
-             USER_ROLE_MASKS.member |
-             USER_ROLE_MASKS.friend |
-             USER_ROLE_MASKS.admin,
-    MEMBER:  USER_ROLE_MASKS.member |
-             USER_ROLE_MASKS.admin, 
-    FRIEND:  USER_ROLE_MASKS.friend |
-             USER_ROLE_MASKS.admin,
-    ADMIN:   USER_ROLE_MASKS.admin       
+var USER_ROLES = {
+    all: 1,
+    member: 2,
+    friend: 4,
+    admin: 8
 };
+
+securityConstants.constant('ACCESS_LEVEL', {
+    ALL:     USER_ROLES.all |
+             USER_ROLES.member |
+             USER_ROLES.friend |
+             USER_ROLES.admin,
+    MEMBER:  USER_ROLES.member |
+             USER_ROLES.admin, 
+    FRIEND:  USER_ROLES.friend |
+             USER_ROLES.admin,
+    ADMIN:   USER_ROLES.admin       
+});
