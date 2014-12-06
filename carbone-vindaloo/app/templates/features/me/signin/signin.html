@@ -10,7 +10,10 @@
       <label class="item item-input">
           <i class="icon ion-person placeholder-icon"></i>
           <input type="text" 
-                 id="username" 
+                 id="username"
+                 minLength="1"
+                 maxlength="36" 
+                 required title="1 to 36 characters"
                  placeholder="Username" 
                  ng-model="credentials.username">
       </label>
@@ -18,7 +21,10 @@
       <label class="item item-input">
           <i class="icon ion-key placeholder-icon"></i>
           <input type="password" 
-                 id="password" 
+                 id="password"
+                 minLength="1"
+                 maxlength="36"
+                 required title="1 to 36 characters"
                  placeholder="Password"
                  ng-model="credentials.password">
       </label>
