@@ -73,7 +73,9 @@ carbone.run(['$rootScope', 'AUTH_EVENTS', 'AuthService',
 }]);
 
 
-carbone.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+carbone.config(['$stateProvider', '$urlRouterProvider',
+
+    function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
         .state('tab', {
@@ -83,4 +85,4 @@ carbone.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         });
 
     $urlRouterProvider.otherwise('/signin');
-});
+}]);
