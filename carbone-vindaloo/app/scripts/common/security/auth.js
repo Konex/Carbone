@@ -3,7 +3,9 @@
 var auth = angular.module('common.security.auth', []);
 
 
-auth.service('Session', function () {
+auth.service('Session',
+
+    function () {
     this.create = function (sessionId, userId, userRoles) {
         this.id = sessionId;
         this.userId = userId;
@@ -20,18 +22,26 @@ auth.service('Session', function () {
 
 
 
-auth.config(function ($httpProvider) {
+auth.config([
+    '$httpProvider',
+
+    function ($httpProvider) {
     $httpProvider.interceptors.push([
         '$injector',
         function ($injector) {
             return $injector.get('AuthInterceptor');
         }
     ]);
-});
+}]);
 
 
 
-auth.factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {
+auth.factory('AuthInterceptor', [
+    '$rootScope',
+    '$q',
+    'AUTH_EVENTS',
+
+    function ($rootScope, $q, AUTH_EVENTS) {
     return {
         responseError: function (response) {
             $rootScope.$broadcast({
@@ -44,10 +54,16 @@ auth.factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {
             return $q.reject(response);
         }
     };
-});
+}]);
 
 
-auth.factory('AuthService', function ($http, Session) {
+auth.factory('AuthService', [
+    '$http',
+    'Session',
+    'ACCESS_LEVEL',
+    '_',
+
+    function ($http, Session, ACCESS_LEVEL, _) {
     var authService = {};
 
     authService.signin = function (credentials) {
@@ -64,6 +80,8 @@ auth.factory('AuthService', function ($http, Session) {
     };
 
     authService.isAuthorized = function (accessLevel) {
+        if(accessLevel == ACCESS_LEVEL.ALL) return true; 
+
         var accessMaskSum = 0;
         _.each(Session.userRoles, function(userRole) {
             accessMaskSum += userRole && accessLevel; 
@@ -74,4 +92,4 @@ auth.factory('AuthService', function ($http, Session) {
 
 
     return authService;
-});
+}]);

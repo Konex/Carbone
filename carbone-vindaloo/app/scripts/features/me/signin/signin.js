@@ -8,16 +8,16 @@ var signin = angular.module('me.signin', [
 signin.config([
 	'$stateProvider',
 	'$urlRouterProvider',
-	'USER_ROLES',
+	'ACCESS_LEVEL',
 	
-  	function($stateProvider, $urlRouterProvider, USER_ROLES) {
+  	function($stateProvider, $urlRouterProvider, ACCESS_LEVEL) {
   		$stateProvider
 	    .state('signin', {
 			url: '/signin',
 			templateUrl: 'templates/features/me/signin/signin.html',
 			controller: 'SignInCtrl',
 			data: {
-				authorizedRoles: [USER_ROLES.all]
+				accessLevel: ACCESS_LEVEL.ALL
 			}
 	    })
 	}

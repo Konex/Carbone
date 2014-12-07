@@ -26,6 +26,27 @@ carbone.run(function($ionicPlatform) {
 });
 
 
+
+carbone.factory('_', [
+    '$window',
+    function($window) {
+        // place lodash include before angular
+        return $window._;
+    }
+]);
+
+
+
+carbone.run([
+    '$rootScope',
+    '$window', 
+
+    function ($rootScope, $window) {
+        $rootScope._ = $window._;
+}]);
+
+
+
 carbone.run(['$rootScope', 'AUTH_EVENTS', 'AuthService',
 
     function ($rootScope, AUTH_EVENTS, AuthService) {
