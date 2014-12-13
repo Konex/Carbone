@@ -20,7 +20,7 @@ signinController.controller('SignInCtrl', [
     $scope.signin = function () {
         $scope.signInForm.submitted = false;
         if($scope.signInForm.$valid) {
-            AuthService.signin(credentials).then(
+            AuthService.signin($scope.credentials).then(
                 function(user) {
                   $rootScope.$broadcast(AUTH_EVENTS.signinSuccess);
                   $scope.setCurrentUser(user);
