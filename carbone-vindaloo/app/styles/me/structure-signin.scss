@@ -1,12 +1,21 @@
-
+@import "common/structure-common";
 
 .sign-in-form {
 	button, .button {
-		margine-top: 35px;
+		margin-top: 35px;
 	}
 
-	.error-container {
+	.validation-error-show-hide {
+		color: red;
+		margin-right: 10px;
+	}
 
+	.validation-error-show-hide {
+	  	@include transition( all 0.5s ease-in-out );
+	}
+
+	.validation-error-show-hide.ng-hide {
+	  	opacity:0;
 	}
 }
 

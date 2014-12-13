@@ -20,11 +20,11 @@
                     ng-model="credentials.username"
                     ng-focus>
 
-            <div class="error-container" 
+            <div class="error-container validation-error-show-hide" 
                  ng-show="signInForm.username.$invalid && signInForm.submitted && !signInForm.username.$focused">
                 <small  class="error" 
                         ng-show="signInForm.username.$error.required">
-                        Your name is required.
+                        Your name is required
                 </small>
                 <small  class="error" 
                         ng-show="signInForm.username.$error.minlength">
@@ -52,11 +52,11 @@
                     ng-model="credentials.password"
                     ng-focus>
 
-            <div class="error-container" 
+            <div class="error-container validation-error-show-hide" 
                  ng-show="signInForm.password.$invalid && signInForm.submitted && !signInForm.password.$focused">
                 <small  class="error" 
                         ng-show="signInForm.password.$error.required">
-                        Your password is required.
+                        Your password is required
                 </small>
                 <small  class="error" 
                         ng-show="signInForm.password.$error.minlength">
