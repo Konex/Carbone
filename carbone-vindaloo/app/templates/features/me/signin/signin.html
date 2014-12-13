@@ -5,33 +5,72 @@
   
     <h1 class="title text-center balanced">Carbone</h1>
   
-    <form name="signInForm" action="sink.html" target="sink" method="post" ng-controller="SignInCtrl" ng-submit="signin(credentials)" novalidate form-autofill-fix>
+    <form name="signInForm" action="sink.html" target="sink" method="post" ng-controller="SignInCtrl" ng-submit="signin()" novalidate form-autofill-fix>
 
-      <label class="item item-input">
-          <i class="icon ion-person placeholder-icon"></i>
-          <input type="text" 
-                 id="username"
-                 minLength="1"
-                 maxlength="36" 
-                 required title="1 to 36 characters"
-                 placeholder="Username" 
-                 ng-model="credentials.username">
-      </label>
+        <label class="item item-input">
+            <i class="icon ion-person placeholder-icon"></i>
+            <input  type="text" 
+                    id="username"
+                    name="username"
+                    ng-minlength=4
+                    ng-maxlength=36
+                    required 
+                    title="1 to 36 characters"
+                    placeholder="Username" 
+                    ng-model="credentials.username"
+                    ng-focus>
 
-      <label class="item item-input">
-          <i class="icon ion-key placeholder-icon"></i>
-          <input type="password" 
-                 id="password"
-                 minLength="1"
-                 maxlength="36"
-                 required title="1 to 36 characters"
-                 placeholder="Password"
-                 ng-model="credentials.password">
-      </label>
+            <div class="error-container" 
+                 ng-show="signInForm.username.$invalid && signInForm.submitted && !signInForm.username.$focused">
+                <small  class="error" 
+                        ng-show="signInForm.username.$error.required">
+                        Your name is required.
+                </small>
+                <small  class="error" 
+                        ng-show="signInForm.username.$error.minlength">
+                        Your name is required to be at least 4 characters
+                </small>
+                <small  class="error" 
+                        ng-show="signInForm.username.$error.maxlength">
+                        Your name cannot be longer than 36 characters
+                </small>
+            </div>
 
-      <!-- <div class="padding-horizontal"> -->
+        </label>
+
+        <label class="item item-input">
+
+            <i class="icon ion-key placeholder-icon"></i>
+            <input  type="password" 
+                    id="password"
+                    name="password"
+                    ng-minlength=4
+                    ng-maxlength=36
+                    required 
+                    title="1 to 36 characters"
+                    placeholder="Password"
+                    ng-model="credentials.password"
+                    ng-focus>
+
+            <div class="error-container" 
+                 ng-show="signInForm.password.$invalid && signInForm.submitted && !signInForm.password.$focused">
+                <small  class="error" 
+                        ng-show="signInForm.password.$error.required">
+                        Your password is required.
+                </small>
+                <small  class="error" 
+                        ng-show="signInForm.password.$error.minlength">
+                        Your password is required to be at least 4 characters
+                </small>
+                <small  class="error" 
+                        ng-show="signInForm.password.$error.maxlength">
+                        Your password cannot be longer than 36 characters
+                </small>
+            </div>
+
+        </label>
+
         <button type="submit" 
-                ng-click="signin(credentials)" 
                 class="button button-block button-positive">
             Sign in
         </button>

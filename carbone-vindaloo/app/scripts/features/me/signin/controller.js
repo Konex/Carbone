@@ -17,15 +17,21 @@ signinController.controller('SignInCtrl', [
       password: ''
     };
 
-    $scope.signin = function (credentials) {
-      AuthService.signin(credentials).then(
-        function(user) {
-          $rootScope.$broadcast(AUTH_EVENTS.signinSuccess);
-          $scope.setCurrentUser(user);
-          $state.go('tab.me');
-        },
-        function() {
-          $rootScope.$broadcast(AUTH_EVENTS.signinFailed);
-        });
+    $scope.signin = function () {
+        $scope.signInForm.submitted = false;
+        if($scope.signInForm.$valid) {
+            AuthService.signin(credentials).then(
+                function(user) {
+                  $rootScope.$broadcast(AUTH_EVENTS.signinSuccess);
+                  $scope.setCurrentUser(user);
+                  $state.go('tab.me');
+                },
+                function() {
+                    $rootScope.$broadcast(AUTH_EVENTS.signinFailed);
+                }
+            );
+        } else {
+            $scope.signInForm.submitted = true;
+        }
     };
 }]);
