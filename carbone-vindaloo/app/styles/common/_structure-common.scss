@@ -1,1 +1,12 @@
 @import "../lib/bourbon/dist/bourbon";
+
+@import "atoms/global/colors";
+@import "atoms/global/fonts";
+@import "atoms/global/animations";
+@import "atoms/global/visibility";
+
+
+@import "atoms/text/headings";
+
+
+@import "atoms/images/logo";
