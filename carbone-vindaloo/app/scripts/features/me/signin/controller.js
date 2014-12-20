@@ -11,6 +11,7 @@ signinController.controller('SignInCtrl', [
   'AuthService',
   
   function($scope, $rootScope, $state, AUTH_EVENTS, AuthService) {
+    $scope.currentYear = new Date().getFullYear();
 
     $scope.credentials = {
       username: '',
@@ -34,4 +35,5 @@ signinController.controller('SignInCtrl', [
             $scope.signInForm.submitted = true;
         }
     };
+
 }]);
