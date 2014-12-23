@@ -1,6 +1,6 @@
 'use strict';
 
-var signinDirectives = angular.module('me.signin.directives', [])
+var signinDirectives = angular.module('me.signin.directives', []);
 
 
 signinDirectives.directive('formAutofillFix', [
