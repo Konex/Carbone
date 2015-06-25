@@ -5,6 +5,8 @@ var carbone = angular.module('carbone-vindaloo', [
     'config',
     'applicationController',
     'common.security', 
+    'createAccount',
+    'signin',
     'me',
     'inox',
     'carbone',

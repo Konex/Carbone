@@ -1,6 +1,6 @@
 'use strict';
 
-var signinDirectives = angular.module('me.signin.directives', []);
+var signinDirectives = angular.module('signin.directives', []);
 
 
 signinDirectives.directive('formAutofillFix', [
@@ -34,7 +34,7 @@ signinDirectives.directive('signInDialog', [
     function (AUTH_EVENTS) {
     	return {
     		restrict: 'A',
-    		template: '<div ng-if="visible" ng-include="templates\'features\'me\'signin\'signin.html\'">',
+    		template: '<div ng-if="visible" ng-include="templates\'features\'signin\'signin.html\'">',
     		link: function (scope) {
     			var showDialog = function () {
     			scope.visible = true;

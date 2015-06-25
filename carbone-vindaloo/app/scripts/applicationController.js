@@ -15,6 +15,5 @@ applicationController.controller('ApplicationController', [
 		$scope.setCurrentUser = function(user) {
 			$scope.currentUser = user;
 		};
-
 	}
 ]);

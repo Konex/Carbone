@@ -1,6 +1,6 @@
 'use strict';
 
-var signinController = angular.module('me.signin.controller', []);
+var signinController = angular.module('signin.controller', []);
 
 
 signinController.controller('SignInCtrl', [
@@ -34,6 +34,10 @@ signinController.controller('SignInCtrl', [
         } else {
             $scope.signInForm.submitted = true;
         }
+    };
+
+    $scope.createAccount = function () {
+        $state.go('createAccount');
     };
 
 }]);

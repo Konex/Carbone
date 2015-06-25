@@ -1,8 +1,7 @@
 'use strict';
 
 var me = angular.module('me', [
-	'me.controller',
-	'me.signin'
+	'me.controller'
 ]);
 
 me.config([

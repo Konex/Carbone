@@ -1,8 +1,8 @@
 'use strict';
 
-var signin = angular.module('me.signin', [
-  'me.signin.controller',
-  'me.signin.directives'
+var signin = angular.module('signin', [
+  'signin.controller',
+  'signin.directives'
 ]);
 
 signin.config([
@@ -14,7 +14,7 @@ signin.config([
   		$stateProvider
 	    .state('signin', {
 			url: '/signin',
-			templateUrl: 'templates/features/me/signin/signin.html',
+			templateUrl: 'templates/features/signin/signin.html',
 			controller: 'SignInCtrl',
 			data: {
 				accessLevel: ACCESS_LEVEL.ALL
