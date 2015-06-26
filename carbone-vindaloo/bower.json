@@ -4,8 +4,7 @@
   "dependencies": {
     "ionic": "driftyco/ionic-bower#master",
     "bourbon": "~4.0.2",
-    "lodash": "~3.3.0",
-    "mdi": "1.1.34"
+    "lodash": "~3.3.0"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.17",

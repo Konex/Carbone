@@ -1,29 +1,38 @@
 
 <ion-view title="Create account">
     <ion-content>
-
     	<div class="card padding-top">
-			<div class="item item-text-wrap">
-			    We try to keep it simple
+    		<div class="item item-avatar">
+			    <img src="images/profile2.jpg" ng-click="avatarClick()">
+			    <input type="file" id="avatarSelector" style="display: none">
+			    <h2>{{user.name}}</h2>
+			    <p>Inox</p>
+		  	</div>
 
-			    <div class="list">
-					<label class="item item-input item-floating-label">
-					    <span class="input-label">Name</span>
-					    <input type="text" placeholder="Name">
-					</label>
-					<label class="item item-input item-floating-label">
-					    <span class="input-label">Password</span>
-					    <input type="password" placeholder="Password">
-					</label>
-					<label class="item item-input item-floating-label">
-					    <span class="input-label">Email</span>
-					    <input type="text" placeholder="Email">
-					</label>
-				</div>
-			</div>
+		    <div class="list">
+				<label class="item item-input item-floating-label">
+				    <span class="input-label">Name</span>
+				    <input ng-model="user.name" type="text" placeholder="Name">
+				</label>
+				<label class="item item-input item-floating-label">
+				    <span class="input-label">Password</span>
+				    <input ng-model="user.password" type="password" placeholder="Password">
+				</label>
+				<label class="item item-input item-floating-label">
+				    <span class="input-label">Email</span>
+				    <input ng-model="user.email" type="text" placeholder="Email">
+				</label>
+				<label class="item item-input item-floating-label">
+					<span class="input-label">Something about myself</span>
+				    <textarea placeholder="Something about myself"></textarea>
+				</label>
+			</div>			
 		</div>
-
-    	
-	    
+		<button class="button button-block button-positive">
+            Create account
+        </button>
+        <button class="button button-block button-assertive">
+            Cancel
+        </button>
     </ion-content>
 </ion-view>
